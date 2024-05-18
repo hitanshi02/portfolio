@@ -238,7 +238,7 @@ a {
 
 .name_section {
     display: grid;
-    grid-template-columns: auto 34%;
+    grid-template-columns: auto 31.2%;
     grid-gap: 30px;
 }
 
@@ -370,7 +370,7 @@ a {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 2rem;
 }
 
 .socialmedia_section li {
@@ -442,6 +442,8 @@ a {
     text-transform: uppercase;
     font-size: 14px;
     color: #9F9F9F;
+    display: block;
+    margin-top: 6px;
 
 }
 
@@ -635,7 +637,7 @@ a {
 
 .ToolsSoftware_section {
 
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     margin-top: 4rem;
 }
@@ -643,13 +645,13 @@ a {
 .Tools_box {
     border: 1px solid rgb(40, 40, 40);
     border-radius: 32px;
-    overflow: hidden;
 }
 
 .Tools_hading {
     text-align: center;
     background-color: rgb(25, 25, 25);
     padding: 6px;
+    border-radius: 32px 32px 0 0;
 }
 
 .Tools_hading p {
@@ -661,8 +663,9 @@ a {
 .Software_section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
     padding: 16px 32px 32px;
+    height: 180px;
 }
 
 .Tools_images {
@@ -703,7 +706,7 @@ a {
     background-color: var(--color-pink);
     border-radius: 96px;
     border: 0;
-    color: var(--color-White);
+    color: var(--color-dark-black);
 
 }
 
@@ -1027,4 +1030,78 @@ a {
 .hamburger-menu.open .menu-item:nth-child(3) {
     transform: rotate(-45deg);
     transform-origin: 8px;
+}
+
+.hover_dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.technology-box {
+    transition: 0.6s;
+    position: relative;
+}
+
+.technology-box:hover {
+    transform: scale(1.1);
+}
+
+.technology-box:hover .Tools_images {
+    background-color: transparent;
+    border: 1px solid #292929;
+}
+
+.technology-box:hover .hover_dot {
+    background-color: var(--color-pink);
+    width: 10px;
+    height: 10px;
+}
+
+
+
+.Expert_box {
+    padding: 10px;
+    background-color: var(--color-light-black);
+    border-radius: 8px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+    width: 135px;
+}
+
+.technology-box:hover .Expert_box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Expert_box p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #525252;
+    white-space: nowrap;
+}
+
+.Expert_box::after {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    content: '';
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--color-light-black);
+    z-index: 2;
+    filter: drop-shadow(0px -3px 4px rgba(0, 0, 0, 0.07));
 }
